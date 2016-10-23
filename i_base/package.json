@@ -1,0 +1,18 @@
+{
+  "name": "i_base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
+  "scripts":  {
+    "build"      : "docker build -t            i_base ."		,
+    "ssh-as-root": "docker run   -t -i         i_base /bin/bash"	,
+    "ssh"        : "docker run   -t -i -u user i_base /bin/bash"
+  }
+}

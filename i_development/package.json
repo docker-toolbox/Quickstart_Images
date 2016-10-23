@@ -1,0 +1,19 @@
+{
+  "name": "i_development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
+  "scripts":  {
+    "build"      : "docker build -t            i_development .",
+    "ssh-as-root": "docker run   -t -i         i_development /bin/bash",
+    "ssh"        : "docker run   -t -i -u user i_development /bin/bash",
+    "firefox"    : "docker run   -t -i -e DISPLAY=server:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix i_firefox firefox"
+  }
+}

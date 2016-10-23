@@ -1,0 +1,10 @@
+# socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+
+DISPLAY=server:0.0
+
+docker run -ti --rm 				\
+       -e DISPLAY=$DISPLAY 			\
+       -v /tmp/.X11-unix:/tmp/.X11-unix 	\
+       i_firefox				\
+       firefox
+

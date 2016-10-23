@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -x
+REPO="$(basename "$(pwd)")"
+
+echo setup REPO $REPO
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/docker-toolbox/${REPO}.git
+git push -u origin master
